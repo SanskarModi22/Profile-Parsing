@@ -29,7 +29,7 @@ class _PortfoliosState extends State<Portfolios> {
           height: 10,
         ),
         SizedBox(
-          height: 0.52 * height,
+          height: 0.54 * height,
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: portfolios!.length,
@@ -46,7 +46,7 @@ class _PortfoliosState extends State<Portfolios> {
                     ),
                     child: SizedBox(
                       width: 0.9 * width,
-                      height: 0.52 * height,
+                      height: 0.54 * height,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
