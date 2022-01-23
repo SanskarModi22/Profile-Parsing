@@ -25,10 +25,10 @@ class _PortfoliosState extends State<Portfolios> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Container(
+        SizedBox(
           height: 0.52 * height,
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -36,7 +36,7 @@ class _PortfoliosState extends State<Portfolios> {
               itemBuilder: (context, item) {
                 var portfolio = portfolios[item];
                 return Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Card(
                     color: Colors.transparent,
                     shape: RoundedRectangleBorder(
@@ -44,13 +44,13 @@ class _PortfoliosState extends State<Portfolios> {
                         10,
                       ),
                     ),
-                    child: Container(
+                    child: SizedBox(
                       width: 0.9 * width,
                       height: 0.52 * height,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Container(
+                          SizedBox(
                             height: 0.25 * height,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
@@ -63,7 +63,7 @@ class _PortfoliosState extends State<Portfolios> {
                           RichText(
                             text: TextSpan(
                               text: 'Position: ',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
                                 color: Colors.cyanAccent,
@@ -71,7 +71,7 @@ class _PortfoliosState extends State<Portfolios> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: portfolio.position,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                       fontSize: 18),
@@ -82,7 +82,7 @@ class _PortfoliosState extends State<Portfolios> {
                           RichText(
                             text: TextSpan(
                               text: 'Project: ',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
                                 color: Colors.cyanAccent,
@@ -90,7 +90,7 @@ class _PortfoliosState extends State<Portfolios> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: portfolio.projectName,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                       fontSize: 18),

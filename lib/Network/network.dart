@@ -8,10 +8,11 @@ class Network {
   Future<Profile> getProfile() async {
     String url = "https://py.crewbella.com/user/api/profile/chiragbalani";
     final response = await get(Uri.parse(url));
-    print("URL: ${Uri.parse(url)}");
+
     if (response.statusCode == 200) {
       return Profile.fromJson(jsonDecode(response.body));
-    } else
+    } else {
       throw Exception("Error getting Weather Forecast");
+    }
   }
 }

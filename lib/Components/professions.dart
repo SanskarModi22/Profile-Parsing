@@ -24,10 +24,10 @@ class _ProfessionState extends State<Profession> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Container(
+        SizedBox(
           height: 0.2 * height,
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -35,7 +35,7 @@ class _ProfessionState extends State<Profession> {
               itemBuilder: (context, item) {
                 var profession = professions[item];
                 return Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Card(
                     color: Colors.yellow[100],
                     shape: RoundedRectangleBorder(
@@ -46,7 +46,7 @@ class _ProfessionState extends State<Profession> {
                     child: Container(
                       width: 0.43 * width,
                       height: 0.2 * height,
-                      margin: EdgeInsets.only(left: 10,),
+                      margin: const EdgeInsets.only(left: 10,),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -62,7 +62,7 @@ class _ProfessionState extends State<Profession> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: profession.title,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: Colors.black,
                                       fontSize: 18),
@@ -81,7 +81,7 @@ class _ProfessionState extends State<Profession> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: profession.experience.toString(),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: Colors.black,
                                       fontSize: 18),
@@ -100,7 +100,7 @@ class _ProfessionState extends State<Profession> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: profession.quickbookDetails==null?"No Info":profession.quickbookDetails!.rateAmount.toString()+" "+profession.quickbookDetails!.rateCurrency.toString(),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: Colors.black,
                                       fontSize: 18),

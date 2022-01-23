@@ -25,10 +25,10 @@ class _QuestionState extends State<Question> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Container(
+        SizedBox(
           height: 0.3 * height,
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -36,7 +36,7 @@ class _QuestionState extends State<Question> {
               itemBuilder: (context, item) {
                 var question = questions[item];
                 return Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Card(
                     color: Colors.transparent,
                     shape: RoundedRectangleBorder(
@@ -44,7 +44,7 @@ class _QuestionState extends State<Question> {
                         10,
                       ),
                     ),
-                    child: Container(
+                    child: SizedBox(
                       width: 0.9 * width,
                       height: 0.3 * height,
                       child: Column(
@@ -59,7 +59,7 @@ class _QuestionState extends State<Question> {
                           RichText(
                             text: TextSpan(
                               text: 'Ans:  ',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
                                 color: Colors.red,
@@ -67,7 +67,7 @@ class _QuestionState extends State<Question> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: question.answer!.description,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                       fontSize: 18),

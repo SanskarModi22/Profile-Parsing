@@ -20,74 +20,74 @@ class Profile {
   });
 
   Profile.fromJson(Map<String, dynamic> json) {
-    basic = json['basic'] != null ? new Basic.fromJson(json['basic']) : null;
+    basic = json['basic'] != null ? Basic.fromJson(json['basic']) : null;
 
     if (json['client_postings'] != null) {
       clientPostings = <ClientPostings>[];
       json['client_postings'].forEach((v) {
-        clientPostings!.add(new ClientPostings.fromJson(v));
+        clientPostings!.add(ClientPostings.fromJson(v));
       });
     }
 
     if (json['events'] != null) {
       events = <Events>[];
       json['events'].forEach((v) {
-        events!.add(new Events.fromJson(v));
+        events!.add(Events.fromJson(v));
       });
     }
     isLoggedIn = json['is_logged_in'];
     if (json['locations'] != null) {
       locations = <Locations>[];
       json['locations'].forEach((v) {
-        locations!.add(new Locations.fromJson(v));
+        locations!.add(Locations.fromJson(v));
       });
     }
     if (json['portfolio'] != null) {
       portfolio = <Portfolio>[];
       json['portfolio'].forEach((v) {
-        portfolio!.add(new Portfolio.fromJson(v));
+        portfolio!.add(Portfolio.fromJson(v));
       });
     }
     if (json['professions'] != null) {
       professions = <Professions>[];
       json['professions'].forEach((v) {
-        professions!.add(new Professions.fromJson(v));
+        professions!.add(Professions.fromJson(v));
       });
     }
     if (json['questions'] != null) {
       questions = <Questions>[];
       json['questions'].forEach((v) {
-        questions!.add(new Questions.fromJson(v));
+        questions!.add(Questions.fromJson(v));
       });
     }
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.basic != null) {
-      data['basic'] = this.basic!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (basic != null) {
+      data['basic'] = basic!.toJson();
     }
 
-    if (this.clientPostings != null) {
+    if (clientPostings != null) {
       data['client_postings'] =
-          this.clientPostings!.map((v) => v.toJson()).toList();
+          clientPostings!.map((v) => v.toJson()).toList();
     }
 
-    if (this.events != null) {
-      data['events'] = this.events!.map((v) => v.toJson()).toList();
+    if (events != null) {
+      data['events'] = events!.map((v) => v.toJson()).toList();
     }
-    data['is_logged_in'] = this.isLoggedIn;
-    if (this.locations != null) {
-      data['locations'] = this.locations!.map((v) => v.toJson()).toList();
+    data['is_logged_in'] = isLoggedIn;
+    if (locations != null) {
+      data['locations'] = locations!.map((v) => v.toJson()).toList();
     }
-    if (this.portfolio != null) {
-      data['portfolio'] = this.portfolio!.map((v) => v.toJson()).toList();
+    if (portfolio != null) {
+      data['portfolio'] = portfolio!.map((v) => v.toJson()).toList();
     }
-    if (this.professions != null) {
-      data['professions'] = this.professions!.map((v) => v.toJson()).toList();
+    if (professions != null) {
+      data['professions'] = professions!.map((v) => v.toJson()).toList();
     }
-    if (this.questions != null) {
-      data['questions'] = this.questions!.map((v) => v.toJson()).toList();
+    if (questions != null) {
+      data['questions'] = questions!.map((v) => v.toJson()).toList();
     }
 
     return data;
@@ -114,7 +114,7 @@ class Basic {
   bool? quickbookVerified;
   int? strength;
   String? twitter;
-  Null? type;
+
   int? userId;
   String? username;
   int? visits;
@@ -140,7 +140,7 @@ class Basic {
       this.quickbookVerified,
       this.strength,
       this.twitter,
-      this.type,
+
       this.userId,
       this.username,
       this.visits,
@@ -166,7 +166,7 @@ class Basic {
     quickbookVerified = json['quickbook_verified'];
     strength = json['strength'];
     twitter = json['twitter'];
-    type = json['type_'];
+
     userId = json['user_id'];
     username = json['username'];
     visits = json['visits'];
@@ -174,31 +174,31 @@ class Basic {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['bio'] = this.bio;
-    data['cover'] = this.cover;
-    data['created_at'] = this.createdAt;
-    data['dob'] = this.dob;
-    data['facebook'] = this.facebook;
-    data['followings'] = this.followings;
-    data['fullname'] = this.fullname;
-    data['image'] = this.image;
-    data['image_hd'] = this.imageHd;
-    data['instagram'] = this.instagram;
-    data['is_following'] = this.isFollowing;
-    data['is_verified'] = this.isVerified;
-    data['is_working'] = this.isWorking;
-    data['linkedin'] = this.linkedin;
-    data['name'] = this.name;
-    data['quick_bookings'] = this.quickBookings;
-    data['quickbook_verified'] = this.quickbookVerified;
-    data['strength'] = this.strength;
-    data['twitter'] = this.twitter;
-    data['type_'] = this.type;
-    data['user_id'] = this.userId;
-    data['username'] = this.username;
-    data['visits'] = this.visits;
-    data['website'] = this.website;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['bio'] = bio;
+    data['cover'] = cover;
+    data['created_at'] = createdAt;
+    data['dob'] = dob;
+    data['facebook'] = facebook;
+    data['followings'] = followings;
+    data['fullname'] = fullname;
+    data['image'] = image;
+    data['image_hd'] = imageHd;
+    data['instagram'] = instagram;
+    data['is_following'] = isFollowing;
+    data['is_verified'] = isVerified;
+    data['is_working'] = isWorking;
+    data['linkedin'] = linkedin;
+    data['name'] = name;
+    data['quick_bookings'] = quickBookings;
+    data['quickbook_verified'] = quickbookVerified;
+    data['strength'] = strength;
+    data['twitter'] = twitter;
+
+    data['user_id'] = userId;
+    data['username'] = username;
+    data['visits'] = visits;
+    data['website'] = website;
     return data;
   }
 }
@@ -256,22 +256,22 @@ class ClientPostings {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['budget'] = this.budget;
-    data['budget_cc'] = this.budgetCc;
-    data['created_at'] = this.createdAt;
-    data['description'] = this.description;
-    data['experience'] = this.experience;
-    data['id'] = this.id;
-    data['is_active'] = this.isActive;
-    data['job_type'] = this.jobType;
-    data['location'] = this.location;
-    data['openings'] = this.openings;
-    data['profession'] = this.profession;
-    data['skills'] = this.skills;
-    data['time_period'] = this.timePeriod;
-    data['time_start'] = this.timeStart;
-    data['type_'] = this.type;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['budget'] = budget;
+    data['budget_cc'] = budgetCc;
+    data['created_at'] = createdAt;
+    data['description'] = description;
+    data['experience'] = experience;
+    data['id'] = id;
+    data['is_active'] = isActive;
+    data['job_type'] = jobType;
+    data['location'] = location;
+    data['openings'] = openings;
+    data['profession'] = profession;
+    data['skills'] = skills;
+    data['time_period'] = timePeriod;
+    data['time_start'] = timeStart;
+    data['type_'] = type;
     return data;
   }
 }
@@ -290,10 +290,10 @@ class Events {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['sku'] = this.sku;
-    data['theme'] = this.theme;
-    data['thumbnail'] = this.thumbnail;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['sku'] = sku;
+    data['theme'] = theme;
+    data['thumbnail'] = thumbnail;
     return data;
   }
 }
@@ -327,14 +327,14 @@ class Locations {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['city'] = this.city;
-    data['country'] = this.country;
-    data['created_at'] = this.createdAt;
-    data['id'] = this.id;
-    data['is_primary'] = this.isPrimary;
-    data['state'] = this.state;
-    data['zip_code'] = this.zipCode;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['city'] = city;
+    data['country'] = country;
+    data['created_at'] = createdAt;
+    data['id'] = id;
+    data['is_primary'] = isPrimary;
+    data['state'] = state;
+    data['zip_code'] = zipCode;
     return data;
   }
 }
@@ -369,7 +369,7 @@ class Portfolio {
     if (json['images'] != null) {
       images = <Images>[];
       json['images'].forEach((v) {
-        images!.add(new Images.fromJson(v));
+        images!.add(Images.fromJson(v));
       });
     }
     link = json['link'];
@@ -379,18 +379,18 @@ class Portfolio {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['created_at'] = this.createdAt;
-    data['description'] = this.description;
-    data['ended_time'] = this.endedTime;
-    data['id'] = this.id;
-    if (this.images != null) {
-      data['images'] = this.images!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['created_at'] = createdAt;
+    data['description'] = description;
+    data['ended_time'] = endedTime;
+    data['id'] = id;
+    if (images != null) {
+      data['images'] = images!.map((v) => v.toJson()).toList();
     }
-    data['link'] = this.link;
-    data['position'] = this.position;
-    data['project_name'] = this.projectName;
-    data['started_time'] = this.startedTime;
+    data['link'] = link;
+    data['position'] = position;
+    data['project_name'] = projectName;
+    data['started_time'] = startedTime;
     return data;
   }
 }
@@ -407,9 +407,9 @@ class Images {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['image'] = this.image;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['image'] = image;
     return data;
   }
 }
@@ -441,24 +441,24 @@ class Professions {
     id = json['id'];
     isPrimary = json['is_primary'];
     quickbookDetails = json['quickbook_details'] != null
-        ? new QuickbookDetails.fromJson(json['quickbook_details'])
+        ? QuickbookDetails.fromJson(json['quickbook_details'])
         : null;
     title = json['title'];
     userId = json['user_id'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['created_at'] = this.createdAt;
-    data['experience'] = this.experience;
-    data['for_quickbook'] = this.forQuickbook;
-    data['id'] = this.id;
-    data['is_primary'] = this.isPrimary;
-    if (this.quickbookDetails != null) {
-      data['quickbook_details'] = this.quickbookDetails!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['created_at'] = createdAt;
+    data['experience'] = experience;
+    data['for_quickbook'] = forQuickbook;
+    data['id'] = id;
+    data['is_primary'] = isPrimary;
+    if (quickbookDetails != null) {
+      data['quickbook_details'] = quickbookDetails!.toJson();
     }
-    data['title'] = this.title;
-    data['user_id'] = this.userId;
+    data['title'] = title;
+    data['user_id'] = userId;
     return data;
   }
 }
@@ -489,13 +489,13 @@ class QuickbookDetails {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['is_active'] = this.isActive;
-    data['is_flexible'] = this.isFlexible;
-    data['portfolios_ids'] = this.portfoliosIds;
-    data['rate_amount'] = this.rateAmount;
-    data['rate_currency'] = this.rateCurrency;
-    data['rate_duration'] = this.rateDuration;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['is_active'] = isActive;
+    data['is_flexible'] = isFlexible;
+    data['portfolios_ids'] = portfoliosIds;
+    data['rate_amount'] = rateAmount;
+    data['rate_currency'] = rateCurrency;
+    data['rate_duration'] = rateDuration;
     return data;
   }
 }
@@ -518,7 +518,7 @@ class Questions {
 
   Questions.fromJson(Map<String, dynamic> json) {
     answer =
-        json['answer'] != null ? new Answer.fromJson(json['answer']) : null;
+        json['answer'] != null ? Answer.fromJson(json['answer']) : null;
     createdAt = json['created_at'];
     description = json['description'];
     id = json['id'];
@@ -527,15 +527,15 @@ class Questions {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.answer != null) {
-      data['answer'] = this.answer!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    if (answer != null) {
+      data['answer'] = answer!.toJson();
     }
-    data['created_at'] = this.createdAt;
-    data['description'] = this.description;
-    data['id'] = this.id;
-    data['me'] = this.me;
-    data['title'] = this.title;
+    data['created_at'] = createdAt;
+    data['description'] = description;
+    data['id'] = id;
+    data['me'] = me;
+    data['title'] = title;
     return data;
   }
 }
@@ -554,10 +554,10 @@ class Answer {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['created_at'] = this.createdAt;
-    data['description'] = this.description;
-    data['id'] = this.id;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['created_at'] = createdAt;
+    data['description'] = description;
+    data['id'] = id;
     return data;
   }
 }

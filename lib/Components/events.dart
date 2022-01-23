@@ -25,10 +25,10 @@ class _EventState extends State<Event> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Container(
+        SizedBox(
           height: 0.35 * height,
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -36,7 +36,7 @@ class _EventState extends State<Event> {
               itemBuilder: (context, item) {
                 var event = events[item];
                 return Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Card(
                     color: Colors.transparent,
                     shape: RoundedRectangleBorder(
@@ -44,7 +44,7 @@ class _EventState extends State<Event> {
                         10,
                       ),
                     ),
-                    child: Container(
+                    child: SizedBox(
                       width: 0.67 * width,
                       height: 0.35 * height,
                       child: Column(
@@ -59,7 +59,7 @@ class _EventState extends State<Event> {
                           RichText(
                             text: TextSpan(
                               text: 'Theme: ',
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
                                 color: Colors.green,
@@ -67,7 +67,7 @@ class _EventState extends State<Event> {
                               children: <TextSpan>[
                                 TextSpan(
                                   text: event.theme,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.w700,
                                       color: Colors.white,
                                       fontSize: 18),

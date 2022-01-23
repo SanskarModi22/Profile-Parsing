@@ -25,10 +25,10 @@ class _ClientPostingState extends State<ClientPosting> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
-        Container(
+        SizedBox(
           height: 0.32 * height,
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -36,7 +36,7 @@ class _ClientPostingState extends State<ClientPosting> {
               itemBuilder: (context, item) {
                 var post = postings[item];
                 return Padding(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Card(
                     color: Colors.orange[200],
                     shape: RoundedRectangleBorder(
@@ -44,7 +44,7 @@ class _ClientPostingState extends State<ClientPosting> {
                         10,
                       ),
                     ),
-                    child: Container(
+                    child: SizedBox(
                       width: 0.67 * width,
                       height: 0.32 * height,
                       child: Column(
@@ -52,7 +52,7 @@ class _ClientPostingState extends State<ClientPosting> {
                         children: [
                           Row(
                             children: [
-                              SizedBox(width: 10,),
+                              const SizedBox(width: 10,),
                               CustomText(
                                 text: post.profession,
                                 color: Colors.red,
@@ -62,7 +62,7 @@ class _ClientPostingState extends State<ClientPosting> {
                             ],
                           ),
                           Container(
-                            margin: EdgeInsets.symmetric(horizontal: 5),
+                            margin: const EdgeInsets.symmetric(horizontal: 5),
                             child: CustomText(
                               text: post.description,
                               fontWeight: FontWeight.w500,
@@ -77,7 +77,7 @@ class _ClientPostingState extends State<ClientPosting> {
                               RichText(
                                 text: TextSpan(
                                   text: 'Budget: ',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                     color: Colors.redAccent,
@@ -85,7 +85,7 @@ class _ClientPostingState extends State<ClientPosting> {
                                   children: <TextSpan>[
                                     TextSpan(
                                       text: post.budgetCc!+" "+post.budget.toString(),
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontWeight: FontWeight.w500,
                                           color: Colors.black,
                                           fontSize: 14),
@@ -96,7 +96,7 @@ class _ClientPostingState extends State<ClientPosting> {
                               RichText(
                                 text: TextSpan(
                                   text: 'Openings: ',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                     color: Colors.redAccent,
@@ -104,7 +104,7 @@ class _ClientPostingState extends State<ClientPosting> {
                                   children: <TextSpan>[
                                     TextSpan(
                                       text: post.openings.toString(),
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontWeight: FontWeight.w500,
                                           color: Colors.black,
                                           fontSize: 14),
@@ -121,7 +121,7 @@ class _ClientPostingState extends State<ClientPosting> {
                               RichText(
                                 text: TextSpan(
                                   text: 'Experience: ',
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 16,
                                     color: Colors.redAccent,
@@ -129,7 +129,7 @@ class _ClientPostingState extends State<ClientPosting> {
                                   children: <TextSpan>[
                                     TextSpan(
                                       text: post.experience.toString(),
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontWeight: FontWeight.w500,
                                           color: Colors.black,
                                           fontSize: 14),
@@ -137,12 +137,12 @@ class _ClientPostingState extends State<ClientPosting> {
                                   ],
                                 ),
                               ),
-                              Container(
+                              SizedBox(
                                 width: 0.32*width,
                                 child: RichText(
                                   text: TextSpan(
                                     text: 'Location: ',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                       color: Colors.redAccent,
@@ -150,7 +150,7 @@ class _ClientPostingState extends State<ClientPosting> {
                                     children: <TextSpan>[
                                       TextSpan(
                                         text: post.location,
-                                        style: TextStyle(
+                                        style: const TextStyle(
                                             fontWeight: FontWeight.w500,
                                             color: Colors.black,
                                             fontSize: 14),
