@@ -467,7 +467,7 @@ class QuickbookDetails {
   bool? isActive;
   bool? isFlexible;
   List<String>? portfoliosIds;
-  int? rateAmount;
+  double? rateAmount;
   String? rateCurrency;
   String? rateDuration;
 

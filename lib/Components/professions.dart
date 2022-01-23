@@ -18,13 +18,10 @@ class _ProfessionState extends State<Profession> {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 12.0),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: CustomText(
-              text: 'Professions',
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-            ),
+          child: CustomText(
+            text: 'Professions',
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
           ),
         ),
         SizedBox(
@@ -49,7 +46,9 @@ class _ProfessionState extends State<Profession> {
                     child: Container(
                       width: 0.43 * width,
                       height: 0.2 * height,
+                      margin: EdgeInsets.only(left: 10,),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           RichText(

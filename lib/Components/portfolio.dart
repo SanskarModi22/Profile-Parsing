@@ -19,13 +19,10 @@ class _PortfoliosState extends State<Portfolios> {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 12.0),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: CustomText(
-              text: 'Portfolios',
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-            ),
+          child: CustomText(
+            text: 'Portfolios',
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
           ),
         ),
         SizedBox(

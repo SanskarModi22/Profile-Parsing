@@ -19,13 +19,10 @@ class _ClientPostingState extends State<ClientPosting> {
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 12.0),
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: CustomText(
-              text: 'Client Postings',
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-            ),
+          child: CustomText(
+            text: 'Client Postings',
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
           ),
         ),
         SizedBox(
@@ -41,7 +38,7 @@ class _ClientPostingState extends State<ClientPosting> {
                 return Padding(
                   padding: EdgeInsets.all(10),
                   child: Card(
-                    color: Colors.orange[100],
+                    color: Colors.orange[200],
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
                         10,
